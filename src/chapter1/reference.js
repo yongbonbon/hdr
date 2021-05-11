@@ -9,3 +9,6 @@ let f = e;
 console.log(e, f);
 f.name = "xxx2";
 console.log(e, f);
+
+let b = null;
+console.log(typeof b);
