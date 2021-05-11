@@ -1,3 +1,5 @@
+"use strict";
+
 const HOST = {
     url: 'http://www.houdunren.com/api',
     port: 443,
