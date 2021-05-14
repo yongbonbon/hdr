@@ -23,3 +23,4 @@ const b = {
 for(let value of b) {
     console.log(value);
 }
+//for of不能直接遍历对象
