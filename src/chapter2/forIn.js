@@ -20,6 +20,7 @@ const b = {
     d: 0,
     data: [1,2,3,4,5],
 }
+console.table(b);
 for(let value of b) {
     console.log(value);
 }
