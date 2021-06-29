@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+      /* main article h2,
+      article h1 {
+        color: red;
+      } */
+      /*子选择器*/
+      main article>h2 {
+        color: red;
+      }
+      /*兄弟选择器 +紧按兄元素的 ~兄元素以下所有的弟元素*/
+      article h1+h2 {
+        color: green;
+      }
+    </style>
 </head>
 <body>
-
+  <main>
+    <article>
+      <h1>后盾人</h1>
+        <h2>hdcms.com</h2>
+      <aside>
+        <h2>houdunren.com</h2>
+      </aside>
+      <h2>hdcms.com</h2>
+    </article>
+  </main>
 </body>
 </html>
