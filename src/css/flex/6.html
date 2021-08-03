@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            padding-left: 100px;
+            padding-top: 100px;
+        }
+
+        article {
+            border: solid 5px blueviolet;
+            width: 280px;
+            display: flex;
+            /*flex-direction: row;*/
+            /*flex-wrap: wrap;*/
+            /*移除换行*/
+            flex-flow: row wrap;
+        }
+
+        article * {
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: white;
+            font-size: 25px;
+            background-clip: content-box;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</article>
+</body>
+</html>

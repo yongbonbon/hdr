@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            background: #f3f3f3;
+        }
+
+        footer {
+            height: 50px;
+            background: #ccc;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: solid 1px #bbb;
+        }
+
+        footer section {
+            flex: 1;
+            border-right: solid 1px #bbb;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        footer section h4 {
+            flex: 0 0 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        footer section ul {
+            display: flex;
+            flex-direction: column;
+            border: solid 1px #ccc;
+            text-align: center;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        footer section ul li {
+            flex: 1 0 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: solid 1px #ccc;
+            cursor: pointer;
+        }
+
+        footer section ul li:last-child {
+            border-bottom: none;
+        }
+
+        footer section:last-child {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+<main></main>
+<footer>
+    <section>
+        <h4>意大利</h4>
+        <ul>
+            <li>AC米兰</li>
+            <li>尤文图斯</li>
+            <li>国际米兰</li>
+        </ul>
+    </section>
+    <section>
+        <h4>英格兰</h4>
+        <ul>
+            <li>曼联</li>
+            <li>利物浦</li>
+            <li>阿森纳</li>
+        </ul>
+    </section>
+    <section>
+        <h4>德国</h4>
+        <ul>
+            <li>拜仁慕尼黑</li>
+            <li>多特蒙德</li>
+            <li>法兰克福</li>
+        </ul>
+    </section>
+</footer>
+</body>
+</html>

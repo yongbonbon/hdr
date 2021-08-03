@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>改变弹性元素顺序</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding-left: 50px;
+            padding-top: 15px;
+        }
+
+        article {
+            border: solid 5px silver;
+            width: 400px;
+            height: 500px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        article section {
+            flex: 1 0 100px;
+            background: #9b59b6;
+            background-clip: content-box;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+        }
+
+        article section div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        article section span {
+            padding: 10px;
+            background: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <section>
+        <div>国际米兰</div>
+        <span onclick="up(this)">Italy</span>
+    </section>
+    <section>
+        <div>切尔西</div>
+        <span onclick="up(this)">England</span>
+    </section>
+    <section>
+        <div>皇家马德里</div>
+        <span onclick="up(this)">Spain</span>
+    </section>
+</article>
+<script>
+    const up = el => {
+        let order = getComputedStyle(el.parentElement, null).order;
+        el.parentElement.style.order = order * 1 - 1;
+    }
+</script>
+</body>
+</html>
