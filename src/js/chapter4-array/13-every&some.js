@@ -33,7 +33,8 @@ console.log(res ? '全部同学合格': '有同学没有合格');
  */
 let arr = ['hdcms', 'houdunren'];
 let res = arr.some((item) => {
-    console.log(item);
-    return false;
+    // console.log(item);
+    // return false;
+    return item === 'hdcms';
 })
 console.log(res);
