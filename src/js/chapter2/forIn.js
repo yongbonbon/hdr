@@ -1,5 +1,6 @@
 let houdunren = ["hdcms", "houdunren.com"];
 for(let key in houdunren) {
+    console.log(key);
     console.log(houdunren[key]);
 }
 const a = {
@@ -25,3 +26,4 @@ for(let value of b) {
     console.log(value);
 }
 //for of不能直接遍历对象
+

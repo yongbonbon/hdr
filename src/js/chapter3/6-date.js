@@ -14,13 +14,13 @@ console.log(hd * 1);
 const start = Date.now();
 for (let i = 0; i < 200000000; i++) {}
 const end = Date.now();
-console.log((end - start) / 1000 + '秒');
+console.log((end - start) / 1000 + "秒");
 
-console.time('for');
+console.time("for");
 for (let i = 0; i < 200000000; i++) {}
-console.timeEnd('for');
+console.timeEnd("for");
 
-const date = new Date('1990-9-22 3:22:18');
+const date = new Date("1990-9-22 3:22:18");
 console.log(date);
 console.log(date.getMonth());
 
@@ -31,31 +31,49 @@ const param = [1990, 2, 22, 13, 22, 19];
 const date = new Date(...param);
 console.log(date);
 
-const date = new Date('1996-7-12 08:22:12');
+const date = new Date("1996-7-12 08:22:12");
 console.log(date);
 console.log(Number(date));
 console.log(date.valueOf());
 console.log(date.getTime());
-const timestamp = date.valueOf()
+const timestamp = date.valueOf();
 console.log(timestamp);
 console.log(new Date(timestamp));
 
 //封装日期格式化函数
-const dateFormat = (date, format = 'YYYY-MM-DD HH:mm:ss') => {
-    const config = {
-        YYYY: date.getFullYear(),
-        MM: date.getMonth(),
-        DD: date.getDate(),
-        HH : date.getHours(),
-        mm : date.getMinutes(),
-        ss : date.getSeconds(),
-    };
-    for(const key in config) {
-        console.log(key);
-        console.log(config[key]);
-        format = format.replace(key, config[key]);
-    }
-    return format;
-}
-const date = new Date('1992-2-12 10:22:12');
-console.log(dateFormat(date, 'YYYY年MM月DD日'));
+const dateFormat = (date, format = "YYYY-MM-DD HH:mm:ss") => {
+  const config = {
+    YYYY: date.getFullYear(),
+    MM: date.getMonth(),
+    DD: date.getDate(),
+    HH: date.getHours(),
+    mm: date.getMinutes(),
+    ss: date.getSeconds(),
+  };
+  for (const key in config) {
+    console.log(key);
+    console.log(config[key]);
+    format = format.replace(key, config[key]);
+  }
+  return format;
+};
+const date = new Date("1992-2-12 10:22:12");
+console.log(dateFormat(date, "YYYY年MM月DD日"));
+
+console.log(
+  `Today:${new Date().toLocaleString("default", { weekday: "long" })}`
+);
+
+const statusStr = {
+  1: "待付款",
+  2: "待发货",
+  3: "已发货",
+  4: "交易完成",
+  5: "交易关闭",
+  default: "xx",
+};
+const getStatus = (status) => {
+  return statusStr[status] || statusStr['default'];
+};
+
+console.log(getStatus())
